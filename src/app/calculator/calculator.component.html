@@ -1,0 +1,9 @@
+<h2 class="my-3">Calculator</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-right">{{ mem }} {{ operator }}</div>
+    <input class="col-12 form-control text-right mb-3" [(ngModel)]="result">
+    <button class="col-3" (click)="onButton(button)" *ngFor="let button of buttons">{{ button }}</button>
+  </div>
+</div>
