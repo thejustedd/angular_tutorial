@@ -30,7 +30,7 @@ export class CalculatorComponent implements OnInit {
         this.result += button.toString() : this.result = (+button).toString();
     }
     else {
-      this.mem = parseFloat(this.result);
+      this.operator ? this.mem = eval(this.mem + this.operator + this.result) : this.mem = parseFloat(this.result);
       this.operator = button;
       this.result = '0';
     }
